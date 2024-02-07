@@ -7,11 +7,11 @@ description: "Este endpoint exibe a lista de cobrança dos clientes."
 ### Response
 
 <ResponseField name="amount" type="number">
-  Valor a ser cobrado.
+  Valor em reais.
 </ResponseField>
 
 <ResponseField name="catalogProductId" type="string">
-  Indicates whether a new user group was created.
+  Identificador do catálogo do produto cobrado.
 </ResponseField>
 
 <ResponseField name="createdAt" type="string">
@@ -19,19 +19,19 @@ description: "Este endpoint exibe a lista de cobrança dos clientes."
 </ResponseField>
 
 <ResponseField name="customerId" type="number">
-  ID do customer.
+  Identificador do cliente.
 </ResponseField>
 
 <ResponseField name="id" type="number">
-  ID da transação.
+  Identificador da cobrança.
 </ResponseField>
 
 <ResponseField name="lastRetry" type="string">
-  Data e Hora da tentativa de cobrança.
+  Última tentativa de cobrança.
 </ResponseField>
 
 <ResponseField name="paymentProcessorResponseData" type="string">
-  Indicates whether a new user group was created.
+  Retorno do integrador de pagamento - PagarMe.
 </ResponseField>
 
 <ResponseField name="retries" type="number">
@@ -39,11 +39,11 @@ description: "Este endpoint exibe a lista de cobrança dos clientes."
 </ResponseField>
 
 <ResponseField name="status" type="text">
-  Status do pagamento do customer.
+  Status cobrança.
 </ResponseField>
 
 <ResponseField name="subscriptionId" type="string">
-  ID de subscription.
+  Identificador da assinatura da cobrança.
 </ResponseField>
 
 <RequestExample>
