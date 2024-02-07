@@ -1,66 +1,111 @@
 ---
-title: "Get User"
-api: "GET https://api.mintlify.com/api/user"
-description: "This endpoint gets or creates a new user."
+title: "Busca Customer"
+api: "GET https://us-central1-jawgames-production-6aaf.cloudfunctions.net/customers/:<phoneNumber>"
+description: "Este endpoint serve para realizar a busca de um customer."
 ---
-
-### Body
-
-<ParamField body="name" type="string">
-  This is the name of the user group.
-</ParamField>
-
-<ParamField body="user_group_id" type="string">
-  This is the ID you use to identify this user group in your database.
-</ParamField>
-
-<ParamField body="mapping" type="object">
-  This is a JSON mapping of schema id to either the data source that this user group should be
-  associated with or id of the datasource you provided when creating it.
-</ParamField>
-
-<ParamField body="properties" type="object">
-  This is a JSON object for properties assigned to this user group. These will be accessible through
-  variables in the dashboards and SQL editor
-</ParamField>
 
 ### Response
 
-<ResponseField name="success" type="number">
-  Indicates whether the call was successful. 1 if successful, 0 if not.
+<ResponseField name="cards" type="number">
+  Lista de cartões de crédito.
 </ResponseField>
 
-<ResponseField name="new_user_group" type="boolean">
-  Indicates whether a new user group was created.
+<ResponseField name="customerIOId" type="boolean">
+  ID no customer IO.
 </ResponseField>
 
-<ResponseField name="user_group" type="object">
+<ResponseField name="firebaseUserId" type="boolean">
+  ID no firebase.
+</ResponseField>
 
-The contents of the user group
+<ResponseField name="phone" type="boolean">
+  Telefone do Customer.
+</ResponseField>
+
+<ResponseField name="subscription" type="object">
+
+Parametros de subscription
 
 <Expandable title="Toggle object">
 
-<ResponseField name="team_id" type="number">
-  This is the internal ID for this user group. You don't need to record this information, since
-  you will not need to use it.
+<ResponseField name="currentCycleStartDate" type="boolean">
+  Data de início do período ativo da assinatura.
 </ResponseField>
 
-<ResponseField name="token" type="string">
-  This is the user group token (userGroupToken or USER_GROUP_TOKEN) that will be used to identify
-  which user group is viewing the dashboard. You should save this on your end to use when rendering
-  an embedded dashboard.
+<ResponseField name="customerId" type="boolean">
+  Identificador do cliente.
 </ResponseField>
 
-<ResponseField name="name" type="string">
-  This is the name of the user group provided in the request body.
+<ResponseField name="id" type="boolean">
+  Identificador da assinatura.
 </ResponseField>
 
-<ResponseField name="provided_id" type="string">
-  This is the user_group_id provided in the request body.
+</Expandable>
+
 </ResponseField>
 
-<ResponseField name="properties" type="JSON or null">
-  This is the properties object if it was provided in the request body
+<ResponseField name="product" type="object">
+
+Parametros de product
+
+<Expandable title="Toggle object">
+
+<ResponseField name="blacknutProductId" type="boolean">
+  Identificador do produto na blacknut.
+</ResponseField>
+
+<ResponseField name="id" type="boolean">
+  Identificador do produto na Jaw.
+</ResponseField>
+
+<ResponseField name="name" type="boolean">
+  Nome do produto.
+</ResponseField>
+
+<ResponseField name="price" type="boolean">
+  Preço em reais.
+</ResponseField>
+
+</Expandable>
+
+<ResponseField name="startDate" type="boolean">
+  Data de início da assinatura.
+</ResponseField>
+
+<ResponseField name="status" type="boolean">
+  Status da assinatura.
+</ResponseField>
+
+<ResponseField name="trialValidUntil" type="boolean">
+  Data de fim do período de teste da assinatura.
+</ResponseField>
+
+</Expandable>
+
+</ResponseField>
+
+<ResponseField name="subscriptionInBlacknut" type="object">
+
+Parametros do subscription na Blacknut
+
+<Expandable title="Toggle object">
+
+<ResponseField name="id" type="boolean">
+  Identificador da assinatura na blacknut.
+</ResponseField>
+
+</Expandable>
+
+</ResponseField>
+
+<ResponseField name="userInBlacknut" type="object">
+
+Parametros do Usuário na Blacknut
+
+<Expandable title="Toggle object">
+
+<ResponseField name="id" type="boolean">
+  Identificador do usuário na blacknut.
 </ResponseField>
 
 </Expandable>
