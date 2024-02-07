@@ -1,14 +1,33 @@
 ---
 title: "Create Customer"
-api: "POST https://api.mintlify.com/customers"
+api: "POST https://us-central1-jawgames-production-6aaf.cloudfunctions.net/customers"
 description: "Este endpoint cria um novo cliente"
 ---
 
 ### Body
 
-<ParamField body="current_token" type="string">
-  This is the current user group token you have for the user group that you want
-  to rotate.
+<ParamField body="phone" type="string">
+  Este é o parametro para telefone e deve iniciar com 55.
+</ParamField>
+
+<ParamField body="nome" type="string">
+  Este é o parametro para o nome do customer.
+</ParamField>
+
+<ParamField body="email" type="string">
+  Este é o parametro e-mail do customer.
+</ParamField>
+
+<ParamField body="taxId" type="string">
+  Este é o parametro para CPF ou CNPJ.
+</ParamField>
+
+<ParamField body="metadata" {}>
+  Este é o parametro é um campo livre para inserção de dados.
+</ParamField>
+
+<ParamField body="subscriptionMetadata" {}>
+  Este é o parametro é um campo livre para inserção de dados.
 </ParamField>
 
 ### Response
