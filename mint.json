@@ -69,7 +69,7 @@
       "pages": [
         "api-reference/endpoint/get",
         "api-reference/endpoint/create",
-        "api-reference/endpoint/list-payments"
+        "api-reference/endpoint/payments/list"
       ]
     }
   ],
