@@ -42,19 +42,17 @@
     },
     {
       "group": "Essentials",
-      "pages": ["essentials/markdown", "essentials/code", "essentials/images", "essentials/settings", "essentials/navigation"]
+      "pages": ["essentials/markdown"]
+    },
+    {
+      "group": "API Documentation",
+      "pages": ["api-reference/authentication"]
     },
     {
       "group": "Customer",
       "pages": [
         "api-reference/endpoint/get",
         "api-reference/endpoint/create",
-        "api-reference/endpoint/payments/list"
-      ]
-    },
-    {
-      "group": "Payments",
-      "pages": [
         "api-reference/endpoint/payments/list"
       ]
     }
