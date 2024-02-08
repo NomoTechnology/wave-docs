@@ -16,7 +16,7 @@ const qs = new URLSearchParams()
 qs.set("grant_type", "client_credentials")
 qs.set("client_id", clientID)
 qs.set("client_secret", clientSecret)
-qs.set("audience", "<Resource Server Uri>"); // https://api.sbx.wave.nomo.com.br ou https://api.wave.nomo.com.br
+qs.set("audience", "<Resource Server Uri>");
 
 const requestOptions = {
   method: "POST",
