@@ -47,13 +47,8 @@
     {
       "group": "Customer",
       "pages": [
-        "api-reference/endpoint/customers/get",
-        "api-reference/endpoint/customers/create"
-      ]
-    },
-    {
-      "group": "Payments",
-      "pages": [
+        "api-reference/endpoint/get",
+        "api-reference/endpoint/create",
         "api-reference/endpoint/payments/list"
       ]
     }
