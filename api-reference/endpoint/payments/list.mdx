@@ -6,6 +6,10 @@ description: "Lista todos os pagamentos."
 
 ### Response
 
+<ResponseField name="id" type="string">
+  Identificador da cobrança.
+</ResponseField>
+
 <ResponseField name="amount" type="number">
   Valor em reais.
 </ResponseField>
@@ -14,23 +18,19 @@ description: "Lista todos os pagamentos."
   Identificador produto contratado.
 </ResponseField>
 
-<ResponseField name="createdAt" type="string">
+<ResponseField name="createdAt" type="datetime">
   Data e hora de criação do pagamento.
 </ResponseField>
 
-<ResponseField name="customerId" type="number">
+<ResponseField name="customerId" type="string">
   Identificador do cliente.
 </ResponseField>
 
-<ResponseField name="id" type="number">
-  Identificador da cobrança.
+<ResponseField name="lastRetry" type="datetime">
+  Data da última tentativa de cobrança.
 </ResponseField>
 
-<ResponseField name="lastRetry" type="string">
-  Última tentativa de cobrança.
-</ResponseField>
-
-<ResponseField name="paymentProcessorResponseData" type="string">
+<ResponseField name="paymentProcessorResponseData" type="object">
   Retorno do gateway de pagamento.
 </ResponseField>
 
@@ -38,8 +38,8 @@ description: "Lista todos os pagamentos."
   Número de tentativas de pagamento.
 </ResponseField>
 
-<ResponseField name="status" type="text">
-  Status cobrança.
+<ResponseField name="status" type="string">
+  Status da cobrança.
 </ResponseField>
 
 <ResponseField name="subscriptionId" type="string">
@@ -49,15 +49,10 @@ description: "Lista todos os pagamentos."
 <RequestExample>
 
 ```bash Example Request
-curl --location --request GET 'https://api.mintlify.com/api/user' \
+curl --location --request GET '<BASE_URL>/customers/charges' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Token <token>' \
---data-raw '{
-    "user_group_id": "example_1",
-    "name": "Example 1",
-    "mapping": {"40": "213", "134": "386"},
-    "properties": {"filterValue": "value"}
-}'
+--header 'Authorization: Token <token>'
+'
 ```
 
 </RequestExample>
