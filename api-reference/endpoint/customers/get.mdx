@@ -1,10 +1,14 @@
 ---
-title: "Busca Customer"
+title: "List Customers"
 api: "GET https://us-central1-jawgames-production-6aaf.cloudfunctions.net/customers/:<phoneNumber>"
-description: "Este endpoint serve para realizar a busca de um customer."
+description: "Lista todos os customers."
 ---
 
 ### Response
+
+<ResponseField name="id" type="string">
+  Identificador do cliente.
+</ResponseField>
 
 <ResponseField name="cards" type="number">
   Lista de cartões de crédito.
@@ -34,10 +38,6 @@ Parametros de subscription
 
 <ResponseField name="customerId" type="boolean">
   Identificador do cliente.
-</ResponseField>
-
-<ResponseField name="id" type="boolean">
-  Identificador da assinatura.
 </ResponseField>
 
 </Expandable>
