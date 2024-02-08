@@ -37,12 +37,8 @@
   "anchors": [],
   "navigation": [
     {
-      "group": "Get Started",
-      "pages": ["introduction", "quickstart", "development"]
-    },
-    {
-      "group": "Essentials",
-      "pages": ["essentials/markdown"]
+      "group": "Primeiros passos",
+      "pages": ["introduction"]
     },
     {
       "group": "API Documentation",
