@@ -24,7 +24,10 @@
       "url": "mailto:wave@nomo.com.br"
     }
   ],
-  "topbarCtaButton": {},
+  "topbarCtaButton": {
+    "name": "Nomowave",
+    "url": "https://wave.nomo.com.br"
+  },
   "tabs": [
     {
       "name": "API Reference",
@@ -33,6 +36,14 @@
   ],
   "anchors": [],
   "navigation": [
+    {
+      "group": "Get Started",
+      "pages": ["introduction", "quickstart", "development"]
+    },
+    {
+      "group": "Essentials",
+      "pages": ["essentials/markdown", "essentials/code", "essentials/images", "essentials/settings", "essentials/navigation"]
+    },
     {
       "group": "API Documentation",
       "pages": ["api-reference/authentication"]
