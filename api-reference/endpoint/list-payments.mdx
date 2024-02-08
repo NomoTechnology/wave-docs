@@ -1,0 +1,80 @@
+---
+title: "List Payments"
+api: "GET https://us-central1-jawgames-production-6aaf.cloudfunctions.net/customers/charges"
+description: "Lista todos os pagamentos."
+---
+
+### Response
+
+<ResponseField name="amount" type="number">
+  Valor em reais.
+</ResponseField>
+
+<ResponseField name="catalogProductId" type="string">
+  Identificador produto contratado.
+</ResponseField>
+
+<ResponseField name="createdAt" type="string">
+  Data e hora de criação do pagamento.
+</ResponseField>
+
+<ResponseField name="customerId" type="number">
+  Identificador do cliente.
+</ResponseField>
+
+<ResponseField name="id" type="number">
+  Identificador da cobrança.
+</ResponseField>
+
+<ResponseField name="lastRetry" type="string">
+  Última tentativa de cobrança.
+</ResponseField>
+
+<ResponseField name="paymentProcessorResponseData" type="string">
+  Retorno do gateway de pagamento.
+</ResponseField>
+
+<ResponseField name="retries" type="number">
+  Número de tentativas de pagamento.
+</ResponseField>
+
+<ResponseField name="status" type="text">
+  Status cobrança.
+</ResponseField>
+
+<ResponseField name="subscriptionId" type="string">
+  Identificador da assinatura do cliente.
+</ResponseField>
+
+<RequestExample>
+
+```bash Example Request
+curl --location --request GET 'https://api.mintlify.com/api/user' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Token <token>' \
+--data-raw '{
+    "user_group_id": "example_1",
+    "name": "Example 1",
+    "mapping": {"40": "213", "134": "386"},
+    "properties": {"filterValue": "value"}
+}'
+```
+
+</RequestExample>
+
+<ResponseExample>
+
+```json Response
+{
+  "success": 1,
+  "new_user_group": true,
+  "user_group": {
+    "team_id": 3,
+    "token": "<user_group_token_to_auth_dashboard>",
+    "name": "Example 1",
+    "provided_id": "example_1"
+  }
+}
+```
+
+</ResponseExample>
