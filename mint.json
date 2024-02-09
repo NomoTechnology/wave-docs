@@ -49,6 +49,10 @@
       "pages": [
         "api-reference/endpoint/get",
         "api-reference/endpoint/create",
+        "api-reference/endpoint/update",
+        "api-reference/endpoint/delete",
+        "api-reference/endpoint/block",
+        "api-reference/endpoint/unblock",
         "api-reference/endpoint/payments/list"
       ]
     }

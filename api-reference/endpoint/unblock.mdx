@@ -1,0 +1,27 @@
+---
+title: "Unblock Subscription"
+api: "POST https://us-central1-jawgames-production-6aaf.cloudfunctions.net/customers/:phone_number/subscriptions/unblock"
+description: "Este endpoint reativa a renovação da subscription de cliente. Se já existe um ciclo ativo para o cliente, o ciclo será reaproveitado."
+---
+
+### Response
+
+200 OK
+
+<RequestExample>
+
+```bash Request
+curl --location --request POST '<BASE_URL>/customers/:phone_number/subscriptions/unblock' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Token <token>'
+```
+
+</RequestExample>
+
+<ResponseExample>
+
+```json Response 200
+200 OK
+```
+
+</ResponseExample>

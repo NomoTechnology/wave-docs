@@ -5,10 +5,11 @@ description: "Definição do método de autenticação utilizado pela API"
 
 Nossa API segue o protocolo de autorização OAuth2. Dessa forma, para a sua aplicação utilizar os recursos protegidos é necessário seguir o Client Credential flow.
 
-O **Client Credentials flow** é utilizado quando uma aplicação necessita de acesso aos recursos da API (resource server). Diferentemente do Authorization Code flow, utilizado quando é um usuário que necessita desse acesso. No Client Credentials flow, a aplicação envia seu client ID e client secret para o servidor de autorização (authorization server), e este retorna um access token que pode ser utilizado como Bearer Token nas requisições para a nossa API.
+O **Client Credentials flow** é utilizado quando uma aplicação necessita de acesso aos <Tooltip tip="Resource Server">recursos da API</Tooltip>. Diferentemente do Authorization Code flow, utilizado quando é um usuário que necessita desse acesso. No Client Credentials flow, a aplicação envia seu client ID e client secret para o <Tooltip tip="Authorization Server">servidor de autorização</Tooltip>, e este retorna um access token que pode ser utilizado como Bearer Token nas requisições para a nossa API.
 
 Por ser um protocolo padrão, OAuth2 possui libs open source em praticamente todas as principais linguagens de programação. Abaixo, temos um exemplo de um código em JavaScript demonstrando a operação de solicitação do `access token`:
-```js
+<CodeGroup>
+```javascript auth.js
 const clientID = "the-client-id"
 const clientSecret = "the-secret-id"
 
@@ -28,12 +29,13 @@ fetch("<Authorization Server Uri>/oauth/token", requestOptions)
   .then((response) => response.json())
   .then((data) => console.log(data))
 ```
+</CodeGroup>
 Para mais informações: https://auth0.com/docs/get-started/authentication-and-authorization-flow/client-credentials-flow
 
 O **access token** possui uma duração padrão que é informada na resposta da requisição (propriedade `expires_in`). Para aumentar a eficiência da sua aplicação e reduzir tempo de resposta, recomendamos reutilizar um mesmo access token enquanto ele estiver válido.
 
-> Para autenticar na nossa API, você vai precisar de um client_id e de um client_secret. Entre em contato com o nosso time de integração para solicitar a sua credencial e a url da API de autenticação.
+<Warning>Mantenha seu client_id e client_secret em sigilo, não compartilhe com ninguém, são dados sensíveis aos quais apenas você deve ter acesso.</Warning>
 
-> Mantenha seu client_id e client_secret em sigilo, não compartilhe com ninguém, são dados sensíveis aos quais apenas você deve ter acesso.
+<Note>Para autenticar na nossa API, você vai precisar de um client_id e de um client_secret. Entre em contato com o nosso time de integração para solicitar a sua credencial e a url da API de autenticação.</Note>
 
-> A API possui um limite de 1000 token por mês. Essa é uma forma de evitar o uso indevido da aplicação. Por isso, é importante que a integração seja feita de forma a reaproveitar os tokens gerados e não gerar um novo token a cada requisição.
+<Note>A API possui um limite de 1000 token por mês. Essa é uma forma de evitar o uso indevido da aplicação. Por isso, é importante que a integração seja feita de forma a reaproveitar os tokens gerados e não gerar um novo token a cada requisição.</Note>

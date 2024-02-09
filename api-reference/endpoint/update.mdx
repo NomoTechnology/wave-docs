@@ -1,14 +1,10 @@
 ---
-title: "Create Customer"
-api: "POST https://us-central1-jawgames-production-6aaf.cloudfunctions.net/customers"
-description: "Este endpoint cria um novo cliente"
+title: "Update Customer"
+api: "PATCH https://us-central1-jawgames-production-6aaf.cloudfunctions.net/customers/:<phoneNumber>"
+description: "Atualiza um cliente existente"
 ---
 
 ### Body
-
-<ParamField body="phone" type="string" required>
-  Número de telefone incluindo o country code. 55, no caso do Brasil.
-</ParamField>
 
 <ParamField body="name" type="string">
   Nome do cliente.
@@ -32,16 +28,15 @@ description: "Este endpoint cria um novo cliente"
 
 ### Response
 
-201 CREATED
+200 OK
 
 <RequestExample>
 
 ```bash Request
-curl --location --request POST '<BASE_URL>/customers' \
+curl --location --request PATCH '<BASE_URL>/customers/:<phoneNumber>' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Token <token>' \
 --data-raw '{
-    "phone": "5585999999999",
     "name": "Teste",
     "email": "teste@teste.com",
     "taxId": "04499933311"
@@ -52,8 +47,8 @@ curl --location --request POST '<BASE_URL>/customers' \
 
 <ResponseExample>
 
-```json Response 201
-201 CREATED
+```json Response 200
+200 OK
 ```
 
 </ResponseExample>

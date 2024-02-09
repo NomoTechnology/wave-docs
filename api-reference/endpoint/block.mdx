@@ -1,0 +1,27 @@
+---
+title: "Block Subscription"
+api: "POST https://us-central1-jawgames-production-6aaf.cloudfunctions.net/customers/:phone_number/subscriptions/block"
+description: "Este endpoint desativa a renovação da subscription de cliente. A subscription permanecerá ativa até o final do ciclo existente."
+---
+
+### Response
+
+200 OK
+
+<RequestExample>
+
+```bash Request
+curl --location --request POST '<BASE_URL>/customers/:phone_number/subscriptions/block' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Token <token>'
+```
+
+</RequestExample>
+
+<ResponseExample>
+
+```json Response 200
+200 OK
+```
+
+</ResponseExample>

@@ -1,5 +1,5 @@
 ---
-title: "Get Customer"
+title: "Retrieve Customer"
 api: "GET https://us-central1-jawgames-production-6aaf.cloudfunctions.net/customers/:<phoneNumber>"
 description: "Retorna um cliente com base no número de telefone."
 ---
@@ -124,7 +124,7 @@ description: "Retorna um cliente com base no número de telefone."
 
 <RequestExample>
 
-```bash Example Request
+```bash Request
 curl --location --request GET '<BASE_URL>/customers/:phone_number' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Token <token>'
@@ -134,7 +134,7 @@ curl --location --request GET '<BASE_URL>/customers/:phone_number' \
 
 <ResponseExample>
 
-```json Response
+```json Response 200
 {
     "id": "880b4443-7c71-4b79-b953-d4edf23ed363",
     "phone": "+5521999999999",

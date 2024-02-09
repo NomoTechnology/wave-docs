@@ -1,0 +1,27 @@
+---
+title: "Delete Customer"
+api: "DELETE https://us-central1-jawgames-production-6aaf.cloudfunctions.net/customers/:<phoneNumber>"
+description: "Remove um cliente existente. Após ser removido, um cliente não pode ser reativado."
+---
+
+### Response
+
+200 OK
+
+<RequestExample>
+
+```bash Request
+curl --location --request DELETE '<BASE_URL>/customers/:phone_number' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Token <token>'
+```
+
+</RequestExample>
+
+<ResponseExample>
+
+```json Response 200
+200 OK
+```
+
+</ResponseExample>
