@@ -57,6 +57,9 @@
       ]
     }
   ],
+  "api": {
+    "baseUrl": "https://api.jaw.games"
+  },
   "footerSocials": {
   }
 }

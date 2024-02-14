@@ -1,6 +1,6 @@
 ---
 title: "Update Customer"
-api: "PATCH https://us-central1-jawgames-production-6aaf.cloudfunctions.net/customers/:<phoneNumber>"
+api: "PATCH https://us-central1-jawgames-production-6aaf.cloudfunctions.net/customers/{phoneNumber}"
 description: "Atualiza um cliente existente"
 ---
 
@@ -33,7 +33,7 @@ description: "Atualiza um cliente existente"
 <RequestExample>
 
 ```bash Request
-curl --location --request PATCH '<BASE_URL>/customers/:<phoneNumber>' \
+curl --location --request PATCH '<BASE_URL>/customers/{phoneNumber}' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Token <token>' \
 --data-raw '{
