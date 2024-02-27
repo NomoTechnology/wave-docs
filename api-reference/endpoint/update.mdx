@@ -1,8 +1,12 @@
 ---
 title: "Update Customer"
-api: "PATCH https://us-central1-jawgames-production-6aaf.cloudfunctions.net/customers/{phoneNumber}"
+api: "PATCH /customers/{phoneNumber}"
 description: "Atualiza um cliente existente"
 ---
+
+<ParamField path="phoneNumber" type="string">
+  Telefone do cliente. Apenas números e incluindo o country code.
+</ParamField>
 
 ### Body
 

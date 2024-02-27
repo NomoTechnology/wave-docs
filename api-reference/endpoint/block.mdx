@@ -1,8 +1,12 @@
 ---
 title: "Block Subscription"
-api: "POST https://us-central1-jawgames-production-6aaf.cloudfunctions.net/customers/{phone_number}/subscriptions/block"
+api: "POST /customers/{phoneNumber}/subscriptions/block"
 description: "Desativa a renovação da subscription de um cliente. A subscription permanecerá ativa até o final do ciclo existente."
 ---
+
+<ParamField path="phoneNumber" type="string">
+  Telefone do cliente. Apenas números e incluindo o country code.
+</ParamField>
 
 ### Response
 

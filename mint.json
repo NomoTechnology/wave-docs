@@ -47,6 +47,7 @@
     {
       "group": "Customer",
       "pages": [
+        "api-reference/endpoint/list",
         "api-reference/endpoint/get",
         "api-reference/endpoint/create",
         "api-reference/endpoint/update",
@@ -58,7 +59,10 @@
     }
   ],
   "api": {
-    "baseUrl": "https://api.jaw.games"
+    "baseUrl": "https://us-central1-jawgames-sandbox-99c7.cloudfunctions.net",
+    "auth": {
+      "method": "bearer"
+    }
   },
   "footerSocials": {
   }

@@ -1,12 +1,8 @@
 ---
-title: "Retrieve Customer"
-api: "GET /customers/{phoneNumber}"
-description: "Retorna um cliente com base no número de telefone."
+title: "List Customers"
+api: "GET /customers"
+description: "Retorna uma lista de clientes ordenada pela data de criação."
 ---
-
-<ParamField path="phoneNumber" type="string">
-  Telefone do cliente. Apenas números e incluindo o country code.
-</ParamField>
 
 ### Response
 
@@ -103,7 +99,7 @@ curl --location --request GET '<BASE_URL>/customers/:phone_number' \
 <ResponseExample>
 
 ```json Response 200
-{
+[{
     "id": "880b4443-7c71-4b79-b953-d4edf23ed363",
     "phone": "+5521999999999",
     "createdAt": "2024-02-02T19:39:48.357Z",
@@ -124,19 +120,11 @@ curl --location --request GET '<BASE_URL>/customers/:phone_number' \
             "trialOrigin": "otpSignup"
         }
     },
-    "userInBlacknut": {
-        "id": "b15b8c52-bb33-4bc1-a78d-7b565ed8b00d",
-        "createdAt": "2024-02-02T19:39:49.632Z"
-    },
-    "subscriptionInBlacknut": {
-        "id": "4e290f66-108b-4db3-a037-551cf2cba25e",
-        "createdAt": "2024-02-02T19:39:50.412Z"
-    },
     "metadata": {
         "hasLoggedIn": true,
         "otpSignup": true
     }
-}
+}]
 ```
 
 </ResponseExample>

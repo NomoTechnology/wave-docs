@@ -1,8 +1,12 @@
 ---
 title: "Unblock Subscription"
-api: "POST https://us-central1-jawgames-production-6aaf.cloudfunctions.net/customers/{phone_number}/subscriptions/unblock"
+api: "POST /customers/{phoneNumber}/subscriptions/unblock"
 description: "Reativa a renovação da subscription de um cliente. Se já existe um ciclo corrente, um novo ciclo não será criado."
 ---
+
+<ParamField path="phoneNumber" type="string">
+  Telefone do cliente. Apenas números e incluindo o country code.
+</ParamField>
 
 ### Response
 
