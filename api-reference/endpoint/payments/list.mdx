@@ -4,6 +4,10 @@ api: "GET /customers/{phoneNumber}/charges"
 description: "Lista todos os pagamentos de um cliente."
 ---
 
+<ParamField path="phoneNumber" type="string">
+  Telefone do cliente. Apenas números e incluindo o country code.
+</ParamField>
+
 ### Response
 
 <ResponseField name="id" type="string">
